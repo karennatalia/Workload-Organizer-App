@@ -22,6 +22,7 @@
 		5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6606F52819ED600072791F /* CustomTagUILabel.swift */; };
 		5F97C9352819F285003B524C /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C9342819F285003B524C /* MyTasksViewController.swift */; };
 		5F97C9372819F51F003B524C /* MyTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C9362819F51F003B524C /* MyTasksCell.swift */; };
+		5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		5F6606F52819ED600072791F /* CustomTagUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagUILabel.swift; sourceTree = "<group>"; };
 		5F97C9342819F285003B524C /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5F97C9362819F51F003B524C /* MyTasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksCell.swift; sourceTree = "<group>"; };
+		5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				5F6606F52819ED600072791F /* CustomTagUILabel.swift */,
 				5F97C9342819F285003B524C /* MyTasksViewController.swift */,
 				5F97C9362819F51F003B524C /* MyTasksCell.swift */,
+				5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */,
 			);
 			path = "Workload Organizer App";
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */,
 				5F07CE322818D73200F03565 /* AppDelegate.swift in Sources */,
 				5F07CE3C2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld in Sources */,
+				5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */,
 				5F97C9372819F51F003B524C /* MyTasksCell.swift in Sources */,
 				5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */,
 				5F07CE342818D73200F03565 /* SceneDelegate.swift in Sources */,
