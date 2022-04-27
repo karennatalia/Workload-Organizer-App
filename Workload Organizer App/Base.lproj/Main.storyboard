@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,13 +33,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-Xz-BDH">
-                                        <rect key="frame" x="21" y="100" width="227" height="41"/>
+                                        <rect key="frame" x="21" y="100" width="243" height="42"/>
                                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="35"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-Pn-9qZ" customClass="CustomUIView" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="151" width="366" height="41"/>
+                                        <rect key="frame" x="24" y="152" width="366" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="41" id="Mul-Kt-Rhh"/>
                                         </constraints>
@@ -55,11 +56,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DET-Pi-AAc">
-                                        <rect key="frame" x="39" y="161.5" width="17" height="20"/>
+                                        <rect key="frame" x="39" y="162.5" width="17" height="20"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You only have 3 tasks left today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="795-Qt-ia0">
-                                        <rect key="frame" x="71" y="160" width="259.5" height="21"/>
+                                        <rect key="frame" x="71" y="161" width="274.5" height="21"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -80,13 +81,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-xs-63i">
-                                <rect key="frame" x="24" y="241" width="138" height="28"/>
+                                <rect key="frame" x="24" y="241" width="152.5" height="29"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="14" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VC3-9J-EcR">
-                                <rect key="frame" x="0.0" y="271" width="414" height="542"/>
+                                <rect key="frame" x="0.0" y="272" width="414" height="541"/>
                                 <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todaysTaskCell" rowHeight="90" id="i9n-SK-W8H" customClass="TodaysTaskCell" customModule="Workload_Organizer_App" customModuleProvider="target">
@@ -103,21 +104,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-iG-NeD" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="37" width="76" height="18"/>
+                                                    <rect key="frame" x="20" y="37" width="80.5" height="18.5"/>
                                                     <color key="backgroundColor" name="RedLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-Cq-mmw" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="108" y="37" width="36" height="18"/>
+                                                    <rect key="frame" x="112.5" y="37" width="36.5" height="18.5"/>
                                                     <color key="backgroundColor" name="GreenLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-LR-cVR">
-                                                    <rect key="frame" x="20" y="64" width="16" height="15"/>
+                                                    <rect key="frame" x="20" y="64.5" width="16" height="15"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="630-1f-iFM"/>
@@ -125,7 +126,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
-                                                    <rect key="frame" x="45" y="64" width="115.5" height="14"/>
+                                                    <rect key="frame" x="45" y="64.5" width="119" height="14"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -180,21 +181,142 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="55.580357142857139"/>
         </scene>
-        <!--Tasks-->
+        <!--My Tasks View Controller-->
         <scene sceneID="KUR-a1-dG2">
             <objects>
-                <viewController id="u8F-f9-8Op" sceneMemberID="viewController">
+                <viewController id="u8F-f9-8Op" customClass="MyTasksViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0nf-L1-qmb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdo-39-DbZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzN-Gg-v3g">
+                                        <rect key="frame" x="24" y="100" width="159" height="42"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="CBy-xF-mSB"/>
+                                    <constraint firstItem="gzN-Gg-v3g" firstAttribute="top" secondItem="Qdo-39-DbZ" secondAttribute="top" constant="100" id="JlB-8P-bgE"/>
+                                    <constraint firstItem="gzN-Gg-v3g" firstAttribute="leading" secondItem="Qdo-39-DbZ" secondAttribute="leading" constant="24" id="OmZ-el-exJ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="14" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-QX-LbW">
+                                <rect key="frame" x="0.0" y="152" width="414" height="744"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="100" id="Ob8-cp-XVC" customClass="MyTasksCell" customModule="Workload_Organizer_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ob8-cp-XVC" id="zO3-22-vwK">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0l-6Z-7ki">
+                                                    <rect key="frame" x="20" y="11" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sPI-9A-dla">
+                                                    <rect key="frame" x="20" y="40.5" width="16" height="15"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17.5" id="BSQ-Gb-S3t"/>
+                                                        <constraint firstAttribute="width" constant="16" id="mqT-XC-tmf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="April 26, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ue-Lu-wqL">
+                                                    <rect key="frame" x="44" y="40" width="310" height="15"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xVm-Qu-hLC">
+                                                    <rect key="frame" x="20" y="73" width="283" height="4"/>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMf-z5-vu5">
+                                                    <rect key="frame" x="317" y="63" width="37" height="21"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xVm-Qu-hLC" firstAttribute="top" secondItem="sPI-9A-dla" secondAttribute="bottom" constant="16" id="5hZ-e1-vFn"/>
+                                                <constraint firstItem="z0l-6Z-7ki" firstAttribute="leading" secondItem="zO3-22-vwK" secondAttribute="leadingMargin" id="AIr-01-1l3"/>
+                                                <constraint firstItem="xVm-Qu-hLC" firstAttribute="leading" secondItem="zO3-22-vwK" secondAttribute="leadingMargin" id="Ahc-dG-RhM"/>
+                                                <constraint firstItem="wMf-z5-vu5" firstAttribute="top" secondItem="7Ue-Lu-wqL" secondAttribute="bottom" constant="8" id="BXP-Hv-y3p"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="z0l-6Z-7ki" secondAttribute="trailing" id="CgX-FK-kLI"/>
+                                                <constraint firstItem="sPI-9A-dla" firstAttribute="top" secondItem="z0l-6Z-7ki" secondAttribute="bottom" constant="7.5" id="Hy9-1k-ndx"/>
+                                                <constraint firstItem="wMf-z5-vu5" firstAttribute="trailing" secondItem="zO3-22-vwK" secondAttribute="trailingMargin" id="MTk-dr-paE"/>
+                                                <constraint firstItem="7Ue-Lu-wqL" firstAttribute="leading" secondItem="sPI-9A-dla" secondAttribute="trailing" constant="8" id="Vzw-C9-v6T"/>
+                                                <constraint firstItem="sPI-9A-dla" firstAttribute="leading" secondItem="zO3-22-vwK" secondAttribute="leadingMargin" id="ays-Mn-9d7"/>
+                                                <constraint firstItem="z0l-6Z-7ki" firstAttribute="top" secondItem="zO3-22-vwK" secondAttribute="topMargin" id="msB-Fm-pAs"/>
+                                                <constraint firstItem="7Ue-Lu-wqL" firstAttribute="trailing" secondItem="zO3-22-vwK" secondAttribute="trailingMargin" id="qZM-Jw-Y2k"/>
+                                                <constraint firstItem="7Ue-Lu-wqL" firstAttribute="top" secondItem="z0l-6Z-7ki" secondAttribute="bottom" constant="8" id="sz4-Qo-cap"/>
+                                                <constraint firstItem="wMf-z5-vu5" firstAttribute="leading" secondItem="xVm-Qu-hLC" secondAttribute="trailing" constant="14" id="wRK-qM-ZYm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dueDateLabel" destination="7Ue-Lu-wqL" id="AnZ-pm-SV1"/>
+                                            <outlet property="percentageLabel" destination="wMf-z5-vu5" id="OBH-g1-PcI"/>
+                                            <outlet property="progressBar" destination="xVm-Qu-hLC" id="nlG-h6-WPM"/>
+                                            <outlet property="taskTitleLabel" destination="z0l-6Z-7ki" id="yAp-GW-8aT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OAW-cl-DzV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qdo-39-DbZ" firstAttribute="top" secondItem="0nf-L1-qmb" secondAttribute="top" id="6a2-7J-aDY"/>
+                            <constraint firstItem="ayL-QX-LbW" firstAttribute="top" secondItem="Qdo-39-DbZ" secondAttribute="bottom" id="ER7-Mm-HCo"/>
+                            <constraint firstAttribute="bottom" secondItem="ayL-QX-LbW" secondAttribute="bottom" id="LAE-6g-4Ys"/>
+                            <constraint firstItem="ayL-QX-LbW" firstAttribute="leading" secondItem="OAW-cl-DzV" secondAttribute="leading" id="P03-qs-ct3"/>
+                            <constraint firstItem="Qdo-39-DbZ" firstAttribute="trailing" secondItem="OAW-cl-DzV" secondAttribute="trailing" id="P5L-Z5-lM4"/>
+                            <constraint firstItem="ayL-QX-LbW" firstAttribute="trailing" secondItem="OAW-cl-DzV" secondAttribute="trailing" id="krV-ra-KPn"/>
+                            <constraint firstItem="Qdo-39-DbZ" firstAttribute="leading" secondItem="OAW-cl-DzV" secondAttribute="leading" id="vxL-aG-j6G"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tasks" image="list.bullet" catalog="system" id="EiB-qm-2Cf"/>
+                    <navigationItem key="navigationItem" id="E97-kc-COH">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="QZD-LU-gjb">
+                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addTaskAction:" destination="u8F-f9-8Op" id="Yrc-YH-NLM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taskTableView" destination="ayL-QX-LbW" id="VF6-QY-iMp"/>
+                        <segue destination="jut-LQ-P1B" kind="show" identifier="toAddTaskSegue" id="U2Z-pZ-oiM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWR-Co-IoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939" y="708"/>
+            <point key="canvasLocation" x="1779.7101449275365" y="707.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OvX-dJ-G6F">
+            <objects>
+                <viewController id="jut-LQ-P1B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJi-FG-CyR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Fv3-GZ-zO9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HY6-aL-w0C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoK-Ko-XtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="708"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xQM-7w-yov">
@@ -209,27 +331,48 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Gge-8M-qBf"/>
-                        <segue destination="u8F-f9-8Op" kind="relationship" relationship="viewControllers" id="52h-ke-Fpp"/>
+                        <segue destination="zHx-hi-MwF" kind="relationship" relationship="viewControllers" id="52h-ke-Fpp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAq-MR-yY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="357"/>
         </scene>
+        <!--Tasks-->
+        <scene sceneID="lrp-rO-OUx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHx-hi-MwF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tasks" image="list.bullet" catalog="system" id="EiB-qm-2Cf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sVV-7i-0Sz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u8F-f9-8Op" kind="relationship" relationship="rootViewController" id="Mu4-Tm-fRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkv-lx-wHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="707.8125"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="cHC-Cq-mmw">
-            <size key="intrinsicContentSize" width="36" height="18"/>
+            <size key="intrinsicContentSize" width="36.5" height="18.5"/>
         </designable>
         <designable name="utQ-iG-NeD">
-            <size key="intrinsicContentSize" width="76" height="18"/>
+            <size key="intrinsicContentSize" width="80.5" height="18.5"/>
         </designable>
     </designables>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="GreenLevel">
             <color red="0.66299998760223389" green="0.93699997663497925" blue="0.47299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
