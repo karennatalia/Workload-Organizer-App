@@ -3,10 +3,22 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Light.otf">
+            <string>SFProText-Light</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
@@ -15,10 +27,154 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxY-tF-rx2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-Xz-BDH">
+                                        <rect key="frame" x="21" y="100" width="227" height="41"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-Pn-9qZ" customClass="CustomUIView" customModule="Workload_Organizer_App" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="151" width="366" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="Mul-Kt-Rhh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DET-Pi-AAc">
+                                        <rect key="frame" x="39" y="161.5" width="17" height="20"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You only have 3 tasks left today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="795-Qt-ia0">
+                                        <rect key="frame" x="71" y="160" width="259.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Red"/>
+                                <constraints>
+                                    <constraint firstItem="ftE-Xz-BDH" firstAttribute="top" secondItem="hxY-tF-rx2" secondAttribute="top" constant="100" id="0Is-Z8-h0D"/>
+                                    <constraint firstItem="DET-Pi-AAc" firstAttribute="leading" secondItem="hxY-tF-rx2" secondAttribute="leading" constant="39" id="1A1-CX-cnb"/>
+                                    <constraint firstItem="vcR-Pn-9qZ" firstAttribute="leading" secondItem="hxY-tF-rx2" secondAttribute="leading" constant="24" id="2bd-rL-6IS"/>
+                                    <constraint firstAttribute="height" constant="211" id="JB6-6r-6bm"/>
+                                    <constraint firstItem="795-Qt-ia0" firstAttribute="top" secondItem="ftE-Xz-BDH" secondAttribute="bottom" constant="19" id="LbW-0a-poa"/>
+                                    <constraint firstItem="795-Qt-ia0" firstAttribute="leading" secondItem="DET-Pi-AAc" secondAttribute="trailing" constant="15" id="PkC-Af-vrf"/>
+                                    <constraint firstAttribute="trailing" secondItem="vcR-Pn-9qZ" secondAttribute="trailing" constant="24" id="S4m-eP-UCY"/>
+                                    <constraint firstItem="vcR-Pn-9qZ" firstAttribute="top" secondItem="ftE-Xz-BDH" secondAttribute="bottom" constant="10" id="gIy-UA-NOb"/>
+                                    <constraint firstItem="DET-Pi-AAc" firstAttribute="top" secondItem="ftE-Xz-BDH" secondAttribute="bottom" constant="21" id="isZ-FT-cMB"/>
+                                    <constraint firstItem="ftE-Xz-BDH" firstAttribute="leading" secondItem="hxY-tF-rx2" secondAttribute="leading" constant="21" id="jMa-rY-AXV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIu-xs-63i">
+                                <rect key="frame" x="24" y="241" width="138" height="28"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="14" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VC3-9J-EcR">
+                                <rect key="frame" x="0.0" y="271" width="414" height="542"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todaysTaskCell" rowHeight="90" id="i9n-SK-W8H" customClass="TodaysTaskCell" customModule="Workload_Organizer_App" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i9n-SK-W8H" id="hhe-En-seA">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-Qf-Iou">
+                                                    <rect key="frame" x="20" y="11" width="334" height="20"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-iG-NeD" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="37" width="76" height="18"/>
+                                                    <color key="backgroundColor" name="RedLevel"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-Cq-mmw" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
+                                                    <rect key="frame" x="108" y="37" width="36" height="18"/>
+                                                    <color key="backgroundColor" name="GreenLevel"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-LR-cVR">
+                                                    <rect key="frame" x="20" y="64" width="16" height="15"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="630-1f-iFM"/>
+                                                        <constraint firstAttribute="width" constant="16" id="K8C-DL-Fg2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
+                                                    <rect key="frame" x="45" y="64" width="115.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3l1-Qf-Iou" firstAttribute="trailing" secondItem="hhe-En-seA" secondAttribute="trailingMargin" id="1i0-fc-qmm"/>
+                                                <constraint firstItem="utQ-iG-NeD" firstAttribute="top" secondItem="3l1-Qf-Iou" secondAttribute="bottom" constant="6" id="7G1-CW-Q06"/>
+                                                <constraint firstItem="Ypv-hq-Ghe" firstAttribute="top" secondItem="utQ-iG-NeD" secondAttribute="bottom" constant="9" id="80i-5l-FEf"/>
+                                                <constraint firstItem="cHC-Cq-mmw" firstAttribute="top" secondItem="3l1-Qf-Iou" secondAttribute="bottom" constant="6" id="9B0-IJ-h8e"/>
+                                                <constraint firstItem="Glc-LR-cVR" firstAttribute="top" secondItem="utQ-iG-NeD" secondAttribute="bottom" constant="8.5" id="GiZ-6w-Md4"/>
+                                                <constraint firstItem="Glc-LR-cVR" firstAttribute="leading" secondItem="hhe-En-seA" secondAttribute="leadingMargin" id="Rbl-9U-S2V"/>
+                                                <constraint firstItem="utQ-iG-NeD" firstAttribute="leading" secondItem="hhe-En-seA" secondAttribute="leadingMargin" id="bg0-Ut-BqL"/>
+                                                <constraint firstItem="Ypv-hq-Ghe" firstAttribute="leading" secondItem="Glc-LR-cVR" secondAttribute="trailing" constant="9" id="ksp-cH-rwg"/>
+                                                <constraint firstItem="3l1-Qf-Iou" firstAttribute="leading" secondItem="hhe-En-seA" secondAttribute="leadingMargin" id="mPA-UA-rxw"/>
+                                                <constraint firstItem="3l1-Qf-Iou" firstAttribute="top" secondItem="hhe-En-seA" secondAttribute="topMargin" id="oe5-C4-gcp"/>
+                                                <constraint firstItem="cHC-Cq-mmw" firstAttribute="leading" secondItem="utQ-iG-NeD" secondAttribute="trailing" constant="12" id="xJ8-3G-HP8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="difficultyLabel" destination="cHC-Cq-mmw" id="Sns-Of-AGE"/>
+                                            <outlet property="priorityLabel" destination="utQ-iG-NeD" id="31Z-aR-1UB"/>
+                                            <outlet property="taskTimeLabel" destination="Ypv-hq-Ghe" id="sAl-7q-9JX"/>
+                                            <outlet property="taskTitleLabel" destination="3l1-Qf-Iou" id="i4B-op-OMb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fIu-xs-63i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="JIu-Yc-4cx"/>
+                            <constraint firstItem="VC3-9J-EcR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MIO-UT-Sf1"/>
+                            <constraint firstItem="hxY-tF-rx2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="PjC-Xp-452"/>
+                            <constraint firstItem="fIu-xs-63i" firstAttribute="top" secondItem="hxY-tF-rx2" secondAttribute="bottom" constant="30" id="TDZ-5J-isS"/>
+                            <constraint firstItem="VC3-9J-EcR" firstAttribute="top" secondItem="fIu-xs-63i" secondAttribute="bottom" constant="2" id="Zwb-ge-cjn"/>
+                            <constraint firstItem="VC3-9J-EcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cja-PR-KFm"/>
+                            <constraint firstItem="hxY-tF-rx2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hnB-7l-gMU"/>
+                            <constraint firstItem="VC3-9J-EcR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ynj-PB-SgE"/>
+                            <constraint firstItem="hxY-tF-rx2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zxo-3L-wKE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="sgI-NL-Jqz"/>
+                    <connections>
+                        <outlet property="motivationLabel" destination="795-Qt-ia0" id="2ab-aO-Yjw"/>
+                        <outlet property="todaysTableView" destination="VC3-9J-EcR" id="DwZ-rO-ynw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,8 +202,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6fd-S1-M5a" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cus-hN-YiX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="Red"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Gge-8M-qBf"/>
@@ -59,9 +217,31 @@
             <point key="canvasLocation" x="0.0" y="357"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="cHC-Cq-mmw">
+            <size key="intrinsicContentSize" width="36" height="18"/>
+        </designable>
+        <designable name="utQ-iG-NeD">
+            <size key="intrinsicContentSize" width="76" height="18"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <namedColor name="GreenLevel">
+            <color red="0.66299998760223389" green="0.93699997663497925" blue="0.47299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.81999993324279785" green="0.10600000619888306" blue="0.04899999126791954" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedLevel">
+            <color red="0.99800002574920654" green="0.53700000047683716" blue="0.55000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

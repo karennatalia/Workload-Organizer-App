@@ -14,6 +14,12 @@
 		5F07CE3C2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CE3A2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld */; };
 		5F07CE3E2818D73300F03565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F07CE3D2818D73300F03565 /* Assets.xcassets */; };
 		5F07CE412818D73300F03565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F07CE3F2818D73300F03565 /* LaunchScreen.storyboard */; };
+		5F07CE4B2818E2C000F03565 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F07CE4A2818E2C000F03565 /* SF-Pro-Text-Semibold.otf */; };
+		5F07CE4D2818EDBA00F03565 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F07CE4C2818EDBA00F03565 /* SF-Pro-Text-Regular.otf */; };
+		5F07CE4F2818EDC500F03565 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F07CE4E2818EDC500F03565 /* SF-Pro-Text-Light.otf */; };
+		5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CE502818EF4D00F03565 /* CustomUIView.swift */; };
+		5F6606F42819E5040072791F /* TodaysTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6606F32819E5040072791F /* TodaysTaskCell.swift */; };
+		5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6606F52819ED600072791F /* CustomTagUILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		5F07CE3D2818D73300F03565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F07CE402818D73300F03565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F07CE422818D73300F03565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F07CE4A2818E2C000F03565 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		5F07CE4C2818EDBA00F03565 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		5F07CE4E2818EDC500F03565 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		5F07CE502818EF4D00F03565 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		5F6606F32819E5040072791F /* TodaysTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysTaskCell.swift; sourceTree = "<group>"; };
+		5F6606F52819ED600072791F /* CustomTagUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagUILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 		5F07CE302818D73200F03565 /* Workload Organizer App */ = {
 			isa = PBXGroup;
 			children = (
+				5F07CE492818E24300F03565 /* fonts */,
 				5F07CE312818D73200F03565 /* AppDelegate.swift */,
 				5F07CE332818D73200F03565 /* SceneDelegate.swift */,
 				5F07CE352818D73200F03565 /* ViewController.swift */,
@@ -66,8 +79,21 @@
 				5F07CE3F2818D73300F03565 /* LaunchScreen.storyboard */,
 				5F07CE422818D73300F03565 /* Info.plist */,
 				5F07CE3A2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld */,
+				5F07CE502818EF4D00F03565 /* CustomUIView.swift */,
+				5F6606F32819E5040072791F /* TodaysTaskCell.swift */,
+				5F6606F52819ED600072791F /* CustomTagUILabel.swift */,
 			);
 			path = "Workload Organizer App";
+			sourceTree = "<group>";
+		};
+		5F07CE492818E24300F03565 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5F07CE4E2818EDC500F03565 /* SF-Pro-Text-Light.otf */,
+				5F07CE4C2818EDBA00F03565 /* SF-Pro-Text-Regular.otf */,
+				5F07CE4A2818E2C000F03565 /* SF-Pro-Text-Semibold.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +154,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F07CE4B2818E2C000F03565 /* SF-Pro-Text-Semibold.otf in Resources */,
+				5F07CE4D2818EDBA00F03565 /* SF-Pro-Text-Regular.otf in Resources */,
+				5F07CE4F2818EDC500F03565 /* SF-Pro-Text-Light.otf in Resources */,
 				5F07CE412818D73300F03565 /* LaunchScreen.storyboard in Resources */,
 				5F07CE3E2818D73300F03565 /* Assets.xcassets in Resources */,
 				5F07CE392818D73200F03565 /* Main.storyboard in Resources */,
@@ -141,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6606F42819E5040072791F /* TodaysTaskCell.swift in Sources */,
 				5F07CE362818D73200F03565 /* ViewController.swift in Sources */,
+				5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */,
 				5F07CE322818D73200F03565 /* AppDelegate.swift in Sources */,
 				5F07CE3C2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld in Sources */,
+				5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */,
 				5F07CE342818D73200F03565 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
