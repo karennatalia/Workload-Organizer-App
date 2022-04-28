@@ -20,10 +20,14 @@
 		5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07CE502818EF4D00F03565 /* CustomUIView.swift */; };
 		5F6606F42819E5040072791F /* TodaysTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6606F32819E5040072791F /* TodaysTaskCell.swift */; };
 		5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6606F52819ED600072791F /* CustomTagUILabel.swift */; };
+		5F93D26B281A486200B99C18 /* SmallTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93D26A281A486200B99C18 /* SmallTaskTableViewController.swift */; };
+		5F93D26D281A4EB100B99C18 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93D26C281A4EB100B99C18 /* TaskTableViewController.swift */; };
 		5F97C9352819F285003B524C /* MyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C9342819F285003B524C /* MyTasksViewController.swift */; };
 		5F97C9372819F51F003B524C /* MyTasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C9362819F51F003B524C /* MyTasksCell.swift */; };
 		5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */; };
 		5F97C93B281A10A0003B524C /* AddViewSmallTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C93A281A10A0003B524C /* AddViewSmallTaskViewController.swift */; };
+		5F97C93D281A333A003B524C /* CustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C93C281A333A003B524C /* CustomSectionHeader.swift */; };
+		5F97C93F281A33DD003B524C /* CustomSectionHeaderUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F97C93E281A33DD003B524C /* CustomSectionHeaderUI.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +46,14 @@
 		5F07CE502818EF4D00F03565 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		5F6606F32819E5040072791F /* TodaysTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysTaskCell.swift; sourceTree = "<group>"; };
 		5F6606F52819ED600072791F /* CustomTagUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTagUILabel.swift; sourceTree = "<group>"; };
+		5F93D26A281A486200B99C18 /* SmallTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTaskTableViewController.swift; sourceTree = "<group>"; };
+		5F93D26C281A4EB100B99C18 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		5F97C9342819F285003B524C /* MyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksViewController.swift; sourceTree = "<group>"; };
 		5F97C9362819F51F003B524C /* MyTasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksCell.swift; sourceTree = "<group>"; };
 		5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTaskViewController.swift; sourceTree = "<group>"; };
 		5F97C93A281A10A0003B524C /* AddViewSmallTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewSmallTaskViewController.swift; sourceTree = "<group>"; };
+		5F97C93C281A333A003B524C /* CustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSectionHeader.swift; sourceTree = "<group>"; };
+		5F97C93E281A33DD003B524C /* CustomSectionHeaderUI.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSectionHeaderUI.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 				5F97C9362819F51F003B524C /* MyTasksCell.swift */,
 				5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */,
 				5F97C93A281A10A0003B524C /* AddViewSmallTaskViewController.swift */,
+				5F97C942281A418F003B524C /* Custom Header */,
+				5F93D26A281A486200B99C18 /* SmallTaskTableViewController.swift */,
+				5F93D26C281A4EB100B99C18 /* TaskTableViewController.swift */,
 			);
 			path = "Workload Organizer App";
 			sourceTree = "<group>";
@@ -106,6 +117,15 @@
 				5F07CE4A2818E2C000F03565 /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		5F97C942281A418F003B524C /* Custom Header */ = {
+			isa = PBXGroup;
+			children = (
+				5F97C93C281A333A003B524C /* CustomSectionHeader.swift */,
+				5F97C93E281A33DD003B524C /* CustomSectionHeaderUI.xib */,
+			);
+			path = "Custom Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F97C93F281A33DD003B524C /* CustomSectionHeaderUI.xib in Resources */,
 				5F07CE4B2818E2C000F03565 /* SF-Pro-Text-Semibold.otf in Resources */,
 				5F07CE4D2818EDBA00F03565 /* SF-Pro-Text-Regular.otf in Resources */,
 				5F07CE4F2818EDC500F03565 /* SF-Pro-Text-Light.otf in Resources */,
@@ -188,10 +209,13 @@
 				5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */,
 				5F07CE322818D73200F03565 /* AppDelegate.swift in Sources */,
 				5F07CE3C2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld in Sources */,
+				5F93D26B281A486200B99C18 /* SmallTaskTableViewController.swift in Sources */,
 				5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */,
 				5F97C93B281A10A0003B524C /* AddViewSmallTaskViewController.swift in Sources */,
 				5F97C9372819F51F003B524C /* MyTasksCell.swift in Sources */,
+				5F97C93D281A333A003B524C /* CustomSectionHeader.swift in Sources */,
 				5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */,
+				5F93D26D281A4EB100B99C18 /* TaskTableViewController.swift in Sources */,
 				5F07CE342818D73200F03565 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

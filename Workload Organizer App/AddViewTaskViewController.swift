@@ -9,7 +9,7 @@ import UIKit
 
 class AddViewTaskViewController: UIViewController {
 
-    @IBOutlet weak var smallTaskTableView: UITableView!
+//    @IBOutlet weak var smallTaskTableView: UITableView!
     
     var smallTaskArray = ["Small Task 1", "Small Task 2", "Small Task 3"]
     
@@ -17,8 +17,8 @@ class AddViewTaskViewController: UIViewController {
         super.viewDidLoad()
 
         self.tabBarController?.tabBar.isHidden = true
-        smallTaskTableView.delegate = self
-        smallTaskTableView.dataSource = self
+//        smallTaskTableView.delegate = self
+//        smallTaskTableView.dataSource = self
     }
 
     @IBAction func addSmallTaskAction(_ sender: Any) {
@@ -29,22 +29,22 @@ class AddViewTaskViewController: UIViewController {
     }
 }
 
-extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        smallTaskArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = smallTaskTableView.dequeueReusableCell(withIdentifier: "smallTaskCell", for: indexPath) as! TodaysTaskCell
-        
-        cell.taskTitleLabel.text = smallTaskArray[indexPath.section]
-        
-        return cell
-    }
-    
-    
-}
+//extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        1
+//    }
+//
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        smallTaskArray.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = smallTaskTableView.dequeueReusableCell(withIdentifier: "smallTaskCell", for: indexPath) as! TodaysTaskCell
+//
+//        cell.taskTitleLabel.text = smallTaskArray[indexPath.section]
+//
+//        return cell
+//    }
+//
+//
+//}
