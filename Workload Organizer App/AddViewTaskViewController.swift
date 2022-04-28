@@ -22,6 +22,7 @@ class AddViewTaskViewController: UIViewController {
     }
 
     @IBAction func addSmallTaskAction(_ sender: Any) {
+        performSegue(withIdentifier: "toAddSmallTaskSegue", sender: self)
     }
     
     @IBAction func addNewTaskAction(_ sender: Any) {
