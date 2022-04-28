@@ -20,6 +20,10 @@ class MyTasksViewController: UIViewController {
         taskTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     @IBAction func addTaskAction(_ sender: Any) {
         performSegue(withIdentifier: "toAddTaskSegue", sender: self)
     }
