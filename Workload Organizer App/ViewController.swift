@@ -45,6 +45,13 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeToSmallTaskSegue" {
+            let dest = segue.destination as! AddViewSmallTaskViewController
+            
+        }
+    }
 
 }
 
@@ -91,6 +98,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             color = UIColor(named: "GreenLevel")!
         }
         return color
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "homeToSmallTaskSegue", sender: self)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

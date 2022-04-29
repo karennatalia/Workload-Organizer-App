@@ -20,7 +20,7 @@ class AddViewTaskViewController: UIViewController {
     @IBOutlet weak var smallTaskTableView: UITableView!
     @IBOutlet weak var rightActionBtn: UIButton!
     @IBOutlet weak var leftActionBtn: UIButton!
-//    var newTask = Task()
+
     var smallTaskList: [SmallTask] = []
     var isViewing = false
     var selectedTask: Task?
@@ -114,16 +114,6 @@ class AddViewTaskViewController: UIViewController {
             performSegue(withIdentifier: "unwindToMyTasks", sender: self)
         }
     }
-    
-//    func setNewTaskData() {
-//        newTask.title = taskTitleField.text!
-//        newTask.dueDate = dueDatePicker.date
-//        newTask.progress = 50
-//
-//        for smallTask in smallTaskList {
-//            newTask.addToSmallTasks(smallTask)
-//        }
-//    }
     
     @IBAction func unwindToAddViewTask(_ unwindSegue: UIStoryboardSegue) {
         smallTaskTableView.reloadData()

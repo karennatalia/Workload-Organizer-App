@@ -186,11 +186,12 @@
                     <connections>
                         <outlet property="motivationLabel" destination="795-Qt-ia0" id="2ab-aO-Yjw"/>
                         <outlet property="todaysTableView" destination="VC3-9J-EcR" id="DwZ-rO-ynw"/>
+                        <segue destination="no8-YT-ZCx" kind="show" identifier="homeToSmallTaskSegue" id="5Je-Ol-mwB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="55.580357142857139"/>
+            <point key="canvasLocation" x="938" y="19"/>
         </scene>
         <!--My Tasks View Controller-->
         <scene sceneID="KUR-a1-dG2">
@@ -576,7 +577,7 @@
         <!--Add View Small Task View Controller-->
         <scene sceneID="lPH-mC-GrU">
             <objects>
-                <viewController id="no8-YT-ZCx" customClass="AddViewSmallTaskViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="no8-YT-ZCx" customClass="AddViewSmallTaskViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhA-Yh-iCg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -726,7 +727,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsV-Wh-ujZ">
-                                <rect key="frame" x="24" y="804" width="160" height="52"/>
+                                <rect key="frame" x="24" y="755" width="160" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Ljm-4w-EJ1"/>
                                     <constraint firstAttribute="width" constant="160" id="i45-Ra-4Kt"/>
@@ -749,7 +750,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-Tf-56w">
-                                <rect key="frame" x="230" y="804" width="160" height="52"/>
+                                <rect key="frame" x="230" y="755" width="160" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="bau-6X-x6m"/>
                                     <constraint firstAttribute="width" constant="160" id="ncX-xU-1hM"/>
@@ -872,7 +873,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="AG5-8f-dhe"/>
+        <segue reference="BdD-5I-7lI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
