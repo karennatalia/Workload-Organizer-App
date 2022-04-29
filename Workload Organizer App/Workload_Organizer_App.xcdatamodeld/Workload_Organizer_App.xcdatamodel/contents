@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="SmallTask" representedClassName="SmallTask" syncable="YES">
+        <attribute name="assignToday" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="dateToDo" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="difficulty" optional="YES" attributeType="String"/>
+        <attribute name="hour" optional="YES" attributeType="String"/>
+        <attribute name="minute" optional="YES" attributeType="String"/>
+        <attribute name="priority" optional="YES" attributeType="String"/>
+        <attribute name="setDate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="setTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="smallTasks" inverseEntity="Task"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES">
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="progress" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="smallTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SmallTask" inverseName="task" inverseEntity="SmallTask"/>
+    </entity>
+    <elements>
+        <element name="SmallTask" positionX="-63" positionY="9" width="128" height="179"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="89"/>
+    </elements>
 </model>
