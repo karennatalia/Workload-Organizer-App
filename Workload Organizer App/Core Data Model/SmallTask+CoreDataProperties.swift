@@ -25,6 +25,7 @@ extension SmallTask {
     @NSManaged public var setDate: Bool
     @NSManaged public var setTime: Bool
     @NSManaged public var title: String?
+    @NSManaged public var isDone: Bool
     @NSManaged public var task: Task?
 
 }

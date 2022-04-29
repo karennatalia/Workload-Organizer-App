@@ -156,7 +156,6 @@ extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "smallTaskCell", for: indexPath) as! TodaysTaskCell
         
         let task = smallTaskList[indexPath.section]
-        print(task)
 
         cell.taskTitleLabel.text = task.title
         cell.priorityLabel.text = task.priority
@@ -164,6 +163,14 @@ extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource 
         cell.difficultyLabel.text = task.difficulty
         cell.difficultyLabel.backgroundColor = setTagColor(value: task.difficulty!)
         cell.taskTimeLabel.text = getDateTimeText(task: task)
+        
+        if task.isDone == true {
+            cell.checkMark.isHidden = false
+            cell.checkMark.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+        }
+        else if task.isDone == false {
+            cell.checkMark.isHidden = true
+        }
         
         return cell
     }
@@ -201,6 +208,42 @@ extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource 
             }
             self.smallTaskList.remove(at: indexPath.section)
             self.smallTaskTableView.reloadData()
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var action = UIContextualAction()
+        if smallTaskList[indexPath.section].isDone == false {
+            action = UIContextualAction(style: .normal, title: "Finish") { (action, view, completionHandler) in
+                let finishedSmallTask = self.smallTaskList[indexPath.section]
+                finishedSmallTask.isDone = true
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    
+                }
+                
+                self.fetchSmallTasks()
+            }
+            action.backgroundColor = UIColor(named: "Green")
+        }
+        else {
+            action = UIContextualAction(style: .normal, title: "Not Finish") { (action, view, completionHandler) in
+                let finishedSmallTask = self.smallTaskList[indexPath.section]
+                finishedSmallTask.isDone = false
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    
+                }
+                
+                self.fetchSmallTasks()
+            }
+            action.backgroundColor = UIColor(named: "Red")
         }
         
         return UISwipeActionsConfiguration(actions: [action])

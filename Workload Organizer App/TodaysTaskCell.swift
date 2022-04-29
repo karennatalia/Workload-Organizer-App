@@ -13,6 +13,7 @@ class TodaysTaskCell: UITableViewCell {
     @IBOutlet weak var priorityLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var taskTimeLabel: UILabel!
+    @IBOutlet weak var checkMark: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
