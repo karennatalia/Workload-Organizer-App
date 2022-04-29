@@ -176,6 +176,7 @@ class AddViewSmallTaskViewController: UIViewController {
                 }
 
                 newSmallTask.assignToday = false
+                newSmallTask.isDone = false
                 smallTaskList.append(newSmallTask)
                 
                 isViewing = false

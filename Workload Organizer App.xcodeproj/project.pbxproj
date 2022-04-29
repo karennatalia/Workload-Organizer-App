@@ -25,10 +25,10 @@
 		5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */; };
 		5F97C93B281A10A0003B524C /* AddViewSmallTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97C93A281A10A0003B524C /* AddViewSmallTaskViewController.swift */; };
 		5FC077B4281AEF87007B7CF3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077B3281AEF87007B7CF3 /* Helper.swift */; };
-		5FC077B9281AFFD1007B7CF3 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077B5281AFFD1007B7CF3 /* Task+CoreDataClass.swift */; };
-		5FC077BA281AFFD1007B7CF3 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077B6281AFFD1007B7CF3 /* Task+CoreDataProperties.swift */; };
-		5FC077BB281AFFD1007B7CF3 /* SmallTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077B7281AFFD1007B7CF3 /* SmallTask+CoreDataClass.swift */; };
-		5FC077BC281AFFD1007B7CF3 /* SmallTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077B8281AFFD1007B7CF3 /* SmallTask+CoreDataProperties.swift */; };
+		5FC077C2281B7C45007B7CF3 /* SmallTask+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077BE281B7C45007B7CF3 /* SmallTask+CoreDataClass.swift */; };
+		5FC077C3281B7C45007B7CF3 /* SmallTask+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077BF281B7C45007B7CF3 /* SmallTask+CoreDataProperties.swift */; };
+		5FC077C4281B7C45007B7CF3 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077C0281B7C45007B7CF3 /* Task+CoreDataClass.swift */; };
+		5FC077C5281B7C45007B7CF3 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC077C1281B7C45007B7CF3 /* Task+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +52,10 @@
 		5F97C938281A00E3003B524C /* AddViewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTaskViewController.swift; sourceTree = "<group>"; };
 		5F97C93A281A10A0003B524C /* AddViewSmallTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewSmallTaskViewController.swift; sourceTree = "<group>"; };
 		5FC077B3281AEF87007B7CF3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		5FC077B5281AFFD1007B7CF3 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5FC077B6281AFFD1007B7CF3 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5FC077B7281AFFD1007B7CF3 /* SmallTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallTask+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5FC077B8281AFFD1007B7CF3 /* SmallTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5FC077BE281B7C45007B7CF3 /* SmallTask+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallTask+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5FC077BF281B7C45007B7CF3 /* SmallTask+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallTask+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5FC077C0281B7C45007B7CF3 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5FC077C1281B7C45007B7CF3 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,10 +123,10 @@
 		5FC077BD281AFFD5007B7CF3 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				5FC077B5281AFFD1007B7CF3 /* Task+CoreDataClass.swift */,
-				5FC077B6281AFFD1007B7CF3 /* Task+CoreDataProperties.swift */,
-				5FC077B7281AFFD1007B7CF3 /* SmallTask+CoreDataClass.swift */,
-				5FC077B8281AFFD1007B7CF3 /* SmallTask+CoreDataProperties.swift */,
+				5FC077BE281B7C45007B7CF3 /* SmallTask+CoreDataClass.swift */,
+				5FC077BF281B7C45007B7CF3 /* SmallTask+CoreDataProperties.swift */,
+				5FC077C0281B7C45007B7CF3 /* Task+CoreDataClass.swift */,
+				5FC077C1281B7C45007B7CF3 /* Task+CoreDataProperties.swift */,
 			);
 			path = "Core Data Model";
 			sourceTree = "<group>";
@@ -206,20 +206,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6606F42819E5040072791F /* TodaysTaskCell.swift in Sources */,
+				5FC077C4281B7C45007B7CF3 /* Task+CoreDataClass.swift in Sources */,
 				5F97C9352819F285003B524C /* MyTasksViewController.swift in Sources */,
-				5FC077B9281AFFD1007B7CF3 /* Task+CoreDataClass.swift in Sources */,
 				5F07CE362818D73200F03565 /* ViewController.swift in Sources */,
-				5FC077BC281AFFD1007B7CF3 /* SmallTask+CoreDataProperties.swift in Sources */,
-				5FC077BA281AFFD1007B7CF3 /* Task+CoreDataProperties.swift in Sources */,
 				5F07CE512818EF4D00F03565 /* CustomUIView.swift in Sources */,
 				5F07CE322818D73200F03565 /* AppDelegate.swift in Sources */,
+				5FC077C5281B7C45007B7CF3 /* Task+CoreDataProperties.swift in Sources */,
 				5F07CE3C2818D73200F03565 /* Workload_Organizer_App.xcdatamodeld in Sources */,
-				5FC077BB281AFFD1007B7CF3 /* SmallTask+CoreDataClass.swift in Sources */,
 				5F97C939281A00E3003B524C /* AddViewTaskViewController.swift in Sources */,
 				5F97C93B281A10A0003B524C /* AddViewSmallTaskViewController.swift in Sources */,
 				5F97C9372819F51F003B524C /* MyTasksCell.swift in Sources */,
 				5F6606F62819ED610072791F /* CustomTagUILabel.swift in Sources */,
 				5F07CE342818D73200F03565 /* SceneDelegate.swift in Sources */,
+				5FC077C2281B7C45007B7CF3 /* SmallTask+CoreDataClass.swift in Sources */,
+				5FC077C3281B7C45007B7CF3 /* SmallTask+CoreDataProperties.swift in Sources */,
 				5FC077B4281AEF87007B7CF3 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

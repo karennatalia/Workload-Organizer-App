@@ -5,6 +5,7 @@
         <attribute name="dateToDo" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="difficulty" optional="YES" attributeType="String"/>
         <attribute name="hour" optional="YES" attributeType="String"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="minute" optional="YES" attributeType="String"/>
         <attribute name="priority" optional="YES" attributeType="String"/>
         <attribute name="setDate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -19,7 +20,7 @@
         <relationship name="smallTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SmallTask" inverseName="task" inverseEntity="SmallTask"/>
     </entity>
     <elements>
-        <element name="SmallTask" positionX="-63" positionY="9" width="128" height="179"/>
+        <element name="SmallTask" positionX="-63" positionY="9" width="128" height="194"/>
         <element name="Task" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

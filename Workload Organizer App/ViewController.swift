@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var motivationLabel: UILabel!
     @IBOutlet weak var todaysTableView: UITableView!
     
-    var todayTaskArray = ["Task 1", "Task 2", "Task 3"]
     var todaysTaskList: [SmallTask] = []
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -46,6 +45,13 @@ class ViewController: UIViewController {
             
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "homeToSmallTaskSegue" {
+            let dest = segue.destination as! AddViewSmallTaskViewController
+            
+        }
+    }
 
 }
 
@@ -69,6 +75,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.difficultyLabel.text = task.difficulty
         cell.difficultyLabel.backgroundColor = setTagColor(value: task.difficulty!)
         
+        if task.isDone == true {
+            cell.checkMark.isHidden = false
+            cell.checkMark.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+        }
+        else if task.isDone == false {
+            cell.checkMark.isHidden = true
+        }
+        
         return cell
     }
     
@@ -86,6 +100,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return color
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "homeToSmallTaskSegue", sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
             let removedSmallTask = self.todaysTaskList[indexPath.section]
@@ -101,6 +119,42 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             
             self.fetchSmallTasks()
             self.motivationLabel.text = "You only have \(self.todaysTaskList.count) tasks left today!"
+        }
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var action = UIContextualAction()
+        if todaysTaskList[indexPath.section].isDone == false {
+            action = UIContextualAction(style: .normal, title: "Finish") { (action, view, completionHandler) in
+                let finishedSmallTask = self.todaysTaskList[indexPath.section]
+                finishedSmallTask.isDone = true
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    
+                }
+                
+                self.fetchSmallTasks()
+            }
+            action.backgroundColor = UIColor(named: "Green")
+        }
+        else {
+            action = UIContextualAction(style: .normal, title: "Not Finish") { (action, view, completionHandler) in
+                let finishedSmallTask = self.todaysTaskList[indexPath.section]
+                finishedSmallTask.isDone = false
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    
+                }
+                
+                self.fetchSmallTasks()
+            }
+            action.backgroundColor = UIColor(named: "Red")
         }
         
         return UISwipeActionsConfiguration(actions: [action])

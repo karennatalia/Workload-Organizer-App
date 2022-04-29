@@ -76,11 +76,27 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = taskTableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as! MyTasksCell
         
         let task = self.taskList![indexPath.section]
+        let progressNumber = getProgress(task: task)
         
         cell.taskTitleLabel.text = task.title
         cell.dueDateLabel.text = Helper.formatDate(date: task.dueDate!)
+        cell.progressBar.progress = Float(progressNumber)/100
+        cell.percentageLabel.text = "\(Int(progressNumber))%"
         
         return cell
+    }
+    
+    func getProgress(task: Task) -> Double {
+        let smallTasks = task.smallTasks?.allObjects as! [SmallTask]
+        var finished = 0.0
+        
+        for smallTask in smallTasks {
+            if smallTask.isDone == true {
+                finished += 1
+            }
+        }
+        
+        return (finished * 100) / Double(smallTasks.count)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
