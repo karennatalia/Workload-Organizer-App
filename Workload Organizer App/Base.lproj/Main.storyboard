@@ -124,8 +124,8 @@
                                                         <constraint firstAttribute="width" constant="16" id="K8C-DL-Fg2"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
-                                                    <rect key="frame" x="45" y="64.5" width="119" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
+                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -458,8 +458,8 @@
                                                         <constraint firstAttribute="height" constant="16" id="6Ge-B9-esm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-f1-CFg">
-                                                    <rect key="frame" x="45" y="64.5" width="119" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-f1-CFg">
+                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="15"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -668,40 +668,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-VJ-ETK">
-                                <rect key="frame" x="0.0" y="422" width="414" height="335"/>
+                                <rect key="frame" x="0.0" y="422" width="414" height="170"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Date To Do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-ZB-HyC">
-                                        <rect key="frame" x="24" y="20" width="128" height="22"/>
-                                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Needed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY7-Ix-eh3">
-                                        <rect key="frame" x="24" y="180" width="114" height="22"/>
+                                        <rect key="frame" x="24" y="18" width="114" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ajt-yR-osf">
-                                        <rect key="frame" x="341" y="16" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="setDateSwitchChanged:" destination="no8-YT-ZCx" eventType="valueChanged" id="mLZ-sC-mMo"/>
-                                        </connections>
-                                    </switch>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Jvh-uV-7zb">
-                                        <rect key="frame" x="24" y="53" width="366" height="105"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="105" id="bKE-zG-BXI"/>
-                                        </constraints>
-                                    </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXy-Jg-Q9D">
-                                        <rect key="frame" x="24" y="213" width="366" height="105"/>
+                                        <rect key="frame" x="24" y="51" width="366" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="105" id="Pc4-rh-odV"/>
                                         </constraints>
                                     </datePicker>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s5N-7A-Oeu">
-                                        <rect key="frame" x="341" y="176" width="51" height="31"/>
+                                        <rect key="frame" x="341" y="14" width="51" height="31"/>
                                         <connections>
                                             <action selector="setTimeSwitchChanged:" destination="no8-YT-ZCx" eventType="valueChanged" id="ukV-ug-TlW"/>
                                         </connections>
@@ -710,24 +692,17 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="eXy-Jg-Q9D" firstAttribute="top" secondItem="s5N-7A-Oeu" secondAttribute="bottom" constant="6" id="21O-6A-uQf"/>
-                                    <constraint firstItem="Jvh-uV-7zb" firstAttribute="top" secondItem="Ajt-yR-osf" secondAttribute="bottom" constant="6" id="5TW-7m-U8W"/>
+                                    <constraint firstItem="s5N-7A-Oeu" firstAttribute="top" secondItem="lbN-VJ-ETK" secondAttribute="top" constant="14" id="FCS-Jl-R5V"/>
                                     <constraint firstItem="MY7-Ix-eh3" firstAttribute="leading" secondItem="lbN-VJ-ETK" secondAttribute="leading" constant="24" id="Geg-RF-aVN"/>
                                     <constraint firstAttribute="trailing" secondItem="s5N-7A-Oeu" secondAttribute="trailing" constant="24" id="Kek-FH-2pp"/>
+                                    <constraint firstItem="MY7-Ix-eh3" firstAttribute="top" secondItem="lbN-VJ-ETK" secondAttribute="top" constant="18" id="LYr-AD-Gwd"/>
                                     <constraint firstAttribute="trailing" secondItem="eXy-Jg-Q9D" secondAttribute="trailing" constant="24" id="R3L-Hp-NBw"/>
-                                    <constraint firstItem="7m1-ZB-HyC" firstAttribute="top" secondItem="lbN-VJ-ETK" secondAttribute="top" constant="20" id="Ua7-iB-WeH"/>
-                                    <constraint firstItem="7m1-ZB-HyC" firstAttribute="leading" secondItem="lbN-VJ-ETK" secondAttribute="leading" constant="24" id="bEe-l8-wzs"/>
                                     <constraint firstItem="eXy-Jg-Q9D" firstAttribute="leading" secondItem="lbN-VJ-ETK" secondAttribute="leading" constant="24" id="fub-dM-YjH"/>
-                                    <constraint firstItem="MY7-Ix-eh3" firstAttribute="top" secondItem="Jvh-uV-7zb" secondAttribute="bottom" constant="22" id="hHi-IH-iqC"/>
-                                    <constraint firstItem="Ajt-yR-osf" firstAttribute="top" secondItem="lbN-VJ-ETK" secondAttribute="top" constant="16" id="iHz-VI-oWZ"/>
-                                    <constraint firstItem="Jvh-uV-7zb" firstAttribute="leading" secondItem="lbN-VJ-ETK" secondAttribute="leading" constant="24" id="lmb-tw-rzL"/>
-                                    <constraint firstAttribute="height" constant="335" id="nWN-pC-fZd"/>
-                                    <constraint firstItem="s5N-7A-Oeu" firstAttribute="top" secondItem="Jvh-uV-7zb" secondAttribute="bottom" constant="18" id="nzZ-Ny-v5R"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jvh-uV-7zb" secondAttribute="trailing" constant="24" id="ypx-Jb-Jy8"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ajt-yR-osf" secondAttribute="trailing" constant="24" id="yqF-rn-0fN"/>
+                                    <constraint firstAttribute="height" constant="170" id="nWN-pC-fZd"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsV-Wh-ujZ">
-                                <rect key="frame" x="24" y="755" width="160" height="52"/>
+                                <rect key="frame" x="24" y="804" width="160" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Ljm-4w-EJ1"/>
                                     <constraint firstAttribute="width" constant="160" id="i45-Ra-4Kt"/>
@@ -750,7 +725,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-Tf-56w">
-                                <rect key="frame" x="230" y="755" width="160" height="52"/>
+                                <rect key="frame" x="230" y="804" width="160" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="bau-6X-x6m"/>
                                     <constraint firstAttribute="width" constant="160" id="ncX-xU-1hM"/>
@@ -798,13 +773,10 @@
                     <connections>
                         <outlet property="additionalBGView" destination="lbN-VJ-ETK" id="HAH-jS-dl1"/>
                         <outlet property="bgViewHeightConstraint" destination="nWN-pC-fZd" id="I57-ey-uPe"/>
-                        <outlet property="datePickerHeightConstraint" destination="bKE-zG-BXI" id="ypD-Nb-1c9"/>
-                        <outlet property="dateToDoPicker" destination="Jvh-uV-7zb" id="Red-xF-h25"/>
                         <outlet property="difficultySC" destination="o9U-Y2-hRT" id="cUP-bq-ti5"/>
                         <outlet property="leftActionBtn" destination="SsV-Wh-ujZ" id="pjn-rq-j4b"/>
                         <outlet property="prioritySC" destination="eg2-QL-d6b" id="BdR-TL-6GY"/>
                         <outlet property="rightActionBtn" destination="dDi-Tf-56w" id="SrR-pm-Q3T"/>
-                        <outlet property="setDateSwitch" destination="Ajt-yR-osf" id="8pa-Zk-soI"/>
                         <outlet property="setTimeSwitch" destination="s5N-7A-Oeu" id="Vo2-p1-jSJ"/>
                         <outlet property="smallTaskTitleField" destination="h8B-K6-dhQ" id="n7j-cj-qeH"/>
                         <outlet property="timeNeededPicker" destination="eXy-Jg-Q9D" id="cHb-U8-TiC"/>
@@ -873,7 +845,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="BdD-5I-7lI"/>
+        <segue reference="5Je-Ol-mwB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>

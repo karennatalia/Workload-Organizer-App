@@ -99,6 +99,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.priorityLabel.backgroundColor = setTagColor(value: task.priority!)
         cell.difficultyLabel.text = task.difficulty
         cell.difficultyLabel.backgroundColor = setTagColor(value: task.difficulty!)
+        if task.setTime == true {
+            cell.taskTimeLabel.text = Helper.getTimeString(hour: task.hour!, minute: task.minute!)
+        }
+        else {
+            cell.taskTimeLabel.text = "-"
+        }
         
         if task.isDone == true {
             cell.checkMark.isHidden = false
