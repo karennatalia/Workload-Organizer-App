@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var todaysTableView: UITableView!
     
     var todaysTaskList: [SmallTask] = []
+    var finishedCount = 0
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -28,8 +29,32 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         fetchSmallTasks()
-        motivationLabel.text = "You only have \(todaysTaskList.count) tasks left today!"
+        checkFinished()
+        setMotivationText()
         todaysTableView.reloadData()
+    }
+    
+    func setMotivationText() {
+        if todaysTaskList.count == 0 {
+            motivationLabel.text = "Add some task to do today!"
+        }
+        else {
+            if finishedCount == todaysTaskList.count {
+                motivationLabel.text = "Yay, you have finished all tasks!"
+            }
+            else {
+                motivationLabel.text = "You only have \(todaysTaskList.count - finishedCount) tasks left today!"
+            }
+        }
+    }
+    
+    func checkFinished() {
+        finishedCount = 0
+        for task in todaysTaskList {
+            if task.isDone == true {
+                finishedCount += 1
+            }
+        }
     }
     
     func fetchSmallTasks() {
@@ -118,7 +143,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             self.fetchSmallTasks()
-            self.motivationLabel.text = "You only have \(self.todaysTaskList.count) tasks left today!"
+            self.checkFinished()
+            self.setMotivationText()
         }
         
         return UISwipeActionsConfiguration(actions: [action])
@@ -130,6 +156,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             action = UIContextualAction(style: .normal, title: "Finish") { (action, view, completionHandler) in
                 let finishedSmallTask = self.todaysTaskList[indexPath.section]
                 finishedSmallTask.isDone = true
+                self.finishedCount += 1
+                self.setMotivationText()
                 do {
                     try self.context.save()
                 }
@@ -145,6 +173,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             action = UIContextualAction(style: .normal, title: "Not Finish") { (action, view, completionHandler) in
                 let finishedSmallTask = self.todaysTaskList[indexPath.section]
                 finishedSmallTask.isDone = false
+                self.finishedCount -= 1
+                self.setMotivationText()
                 do {
                     try self.context.save()
                 }

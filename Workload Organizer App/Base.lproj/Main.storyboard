@@ -103,21 +103,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utQ-iG-NeD" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="37" width="70.5" height="14"/>
+                                                    <rect key="frame" x="20" y="37" width="80.5" height="18.5"/>
                                                     <color key="backgroundColor" name="RedLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-Cq-mmw" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="102.5" y="37" width="26" height="14"/>
+                                                    <rect key="frame" x="112.5" y="37" width="36.5" height="18.5"/>
                                                     <color key="backgroundColor" name="GreenLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-LR-cVR">
-                                                    <rect key="frame" x="20" y="60" width="16" height="15"/>
+                                                    <rect key="frame" x="20" y="64.5" width="16" height="15"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="630-1f-iFM"/>
@@ -125,7 +125,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
-                                                    <rect key="frame" x="45" y="60" width="119" height="14"/>
+                                                    <rect key="frame" x="45" y="64.5" width="119" height="14"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -437,21 +437,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-Gq-CDL" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="37" width="70.5" height="14"/>
+                                                    <rect key="frame" x="20" y="37" width="80.5" height="18.5"/>
                                                     <color key="backgroundColor" name="RedLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piR-dd-3K3" customClass="CustomTagUILabel" customModule="Workload_Organizer_App" customModuleProvider="target">
-                                                    <rect key="frame" x="102.5" y="37" width="26" height="14"/>
+                                                    <rect key="frame" x="112.5" y="37" width="36.5" height="18.5"/>
                                                     <color key="backgroundColor" name="GreenLevel"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gfA-Qo-PPC">
-                                                    <rect key="frame" x="20" y="60" width="16" height="15"/>
+                                                    <rect key="frame" x="20" y="64.5" width="16" height="15"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="3q8-iv-vZJ"/>
@@ -459,7 +459,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14.00 - 15.00 (1 hour)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-f1-CFg">
-                                                    <rect key="frame" x="45" y="60" width="119" height="14"/>
+                                                    <rect key="frame" x="45" y="64.5" width="119" height="14"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -860,16 +860,16 @@
     </scenes>
     <designables>
         <designable name="Ger-Gq-CDL">
-            <size key="intrinsicContentSize" width="70.5" height="14.5"/>
+            <size key="intrinsicContentSize" width="80.5" height="18.5"/>
         </designable>
         <designable name="cHC-Cq-mmw">
-            <size key="intrinsicContentSize" width="26.5" height="14.5"/>
+            <size key="intrinsicContentSize" width="36.5" height="18.5"/>
         </designable>
         <designable name="piR-dd-3K3">
-            <size key="intrinsicContentSize" width="26.5" height="14.5"/>
+            <size key="intrinsicContentSize" width="36.5" height="18.5"/>
         </designable>
         <designable name="utQ-iG-NeD">
-            <size key="intrinsicContentSize" width="70.5" height="14.5"/>
+            <size key="intrinsicContentSize" width="80.5" height="18.5"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
