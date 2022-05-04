@@ -19,5 +19,18 @@ class Helper {
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.string(from: date)
     }
+    
+    static func getTimeString(hour: String, minute: String) -> String {
+        var timeString = ""
+        
+        if hour != "" && hour != "0" {
+            timeString += "\(hour) hour "
+        }
+        if minute != "" && minute != "0" {
+            timeString += "\(minute) minutes "
+        }
+        
+        return timeString
+    }
 }
 

@@ -152,7 +152,12 @@ extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource 
         cell.priorityLabel.backgroundColor = setTagColor(value: task.priority!)
         cell.difficultyLabel.text = task.difficulty
         cell.difficultyLabel.backgroundColor = setTagColor(value: task.difficulty!)
-        cell.taskTimeLabel.text = getDateTimeText(task: task)
+        if task.setTime == true {
+            cell.taskTimeLabel.text = Helper.getTimeString(hour: task.hour!, minute: task.minute!)
+        }
+        else {
+            cell.taskTimeLabel.text = "-"
+        }
         
         if task.isDone == true {
             cell.checkMark.isHidden = false
@@ -237,40 +242,6 @@ extension AddViewTaskViewController: UITableViewDelegate, UITableViewDataSource 
         }
         
         return UISwipeActionsConfiguration(actions: [action])
-    }
-    
-    func getDateTimeText(task: SmallTask) -> String {
-        var dateTimeText = ""
-        
-        if task.setDate == true && task.setTime == true {
-            dateTimeText += Helper.formatDate(date: task.dateToDo!)
-            dateTimeText += " \(getTimeString(hour: task.hour!, minute: task.minute!))"
-        }
-        else if task.setDate == true {
-            dateTimeText = Helper.formatDate(date: task.dateToDo!)
-        }
-        else if task.setTime == true {
-            dateTimeText = "- \(getTimeString(hour: task.hour!, minute: task.minute!))"
-        }
-        else {
-            dateTimeText = "-"
-        }
-        
-        return dateTimeText
-    }
-    
-    func getTimeString(hour: String, minute: String) -> String {
-        var timeString = "( "
-        
-        if hour != "" && hour != "0" {
-            timeString += "\(hour) hour "
-        }
-        if minute != "" && minute != "0" {
-            timeString += "\(minute) minutes "
-        }
-        
-        timeString += ")"
-        return timeString
     }
     
 }

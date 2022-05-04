@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  Workload Organizer App
 //
-//  Created by Karen Natalia on 29/04/22.
+//  Created by Karen Natalia on 04/05/22.
 //
 //
 

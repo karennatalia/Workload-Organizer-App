@@ -13,15 +13,12 @@ class AddViewSmallTaskViewController: UIViewController {
     @IBOutlet weak var smallTaskTitleField: UITextField!
     @IBOutlet weak var prioritySC: UISegmentedControl!
     @IBOutlet weak var difficultySC: UISegmentedControl!
-    @IBOutlet weak var dateToDoPicker: UIDatePicker!
-    @IBOutlet weak var setDateSwitch: UISwitch!
     @IBOutlet weak var setTimeSwitch: UISwitch!
     @IBOutlet weak var additionalBGView: UIView!
     @IBOutlet weak var timeNeededPicker: UIDatePicker!
     @IBOutlet weak var leftActionBtn: UIButton!
     @IBOutlet weak var rightActionBtn: UIButton!
     
-    @IBOutlet weak var datePickerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var timePickerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var bgViewHeightConstraint: NSLayoutConstraint!
     
@@ -35,7 +32,6 @@ class AddViewSmallTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        closeDatePicker()
         closeTimePicker()
         titlePage.text = "Add Small Task"
         
@@ -44,11 +40,6 @@ class AddViewSmallTaskViewController: UIViewController {
             smallTaskTitleField.text = selectedSmallTask?.title
             prioritySC.selectedSegmentIndex = getPriorityIndex()
             difficultySC.selectedSegmentIndex = getDifficultyIndex()
-            if selectedSmallTask?.setDate == true {
-                setDateSwitch.isOn = true
-                dateToDoPicker.date = (selectedSmallTask?.dateToDo)!
-                openDatePicker()
-            }
             if selectedSmallTask?.setTime == true {
                 setTimeSwitch.isOn = true
                 
@@ -72,15 +63,6 @@ class AddViewSmallTaskViewController: UIViewController {
         isViewing = false
     }
     
-    @IBAction func setDateSwitchChanged(_ sender: Any) {
-        if setDateSwitch.isOn {
-            openDatePicker()
-        }
-        else {
-            closeDatePicker()
-        }
-    }
-    
     @IBAction func setTimeSwitchChanged(_ sender: Any) {
         if setTimeSwitch.isOn {
             openTimePicker()
@@ -97,15 +79,6 @@ class AddViewSmallTaskViewController: UIViewController {
             updatedSmallTask.title = smallTaskTitleField.text!
             updatedSmallTask.priority = getPriority()
             updatedSmallTask.difficulty = getDifficulty()
-
-            if setDateSwitch.isOn {
-                updatedSmallTask.setDate = true
-                updatedSmallTask.dateToDo = dateToDoPicker.date
-            }
-            else {
-                updatedSmallTask.setDate = false
-                updatedSmallTask.dateToDo = nil
-            }
 
             if setTimeSwitch.isOn {
                 updatedSmallTask.setTime = true
@@ -153,15 +126,6 @@ class AddViewSmallTaskViewController: UIViewController {
                 newSmallTask.priority = getPriority()
                 newSmallTask.difficulty = getDifficulty()
 
-                if setDateSwitch.isOn {
-                    newSmallTask.setDate = true
-                    newSmallTask.dateToDo = dateToDoPicker.date
-                }
-                else {
-                    newSmallTask.setDate = false
-                    newSmallTask.dateToDo = nil
-                }
-
                 if setTimeSwitch.isOn {
                     newSmallTask.setTime = true
 
@@ -191,19 +155,7 @@ class AddViewSmallTaskViewController: UIViewController {
             dest.smallTaskList = smallTaskList
         }
     }
-    
-    func openDatePicker() {
-        dateToDoPicker.isHidden = false
-        datePickerHeightConstraint.constant = 105
-        bgViewHeightConstraint.constant += 105
-    }
-    
-    func closeDatePicker() {
-        dateToDoPicker.isHidden = true
-        datePickerHeightConstraint.constant = 0
-        bgViewHeightConstraint.constant -= 105
-    }
-    
+
     func openTimePicker() {
         timeNeededPicker.isHidden = false
         timePickerHeightConstraint.constant = 105

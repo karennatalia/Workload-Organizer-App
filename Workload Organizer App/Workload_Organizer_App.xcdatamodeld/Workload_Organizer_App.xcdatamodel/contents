@@ -2,13 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="SmallTask" representedClassName="SmallTask" syncable="YES">
         <attribute name="assignToday" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="dateToDo" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="difficulty" optional="YES" attributeType="String"/>
         <attribute name="hour" optional="YES" attributeType="String"/>
         <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="minute" optional="YES" attributeType="String"/>
         <attribute name="priority" optional="YES" attributeType="String"/>
-        <attribute name="setDate" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="setTime" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="smallTasks" inverseEntity="Task"/>
@@ -20,7 +18,7 @@
         <relationship name="smallTasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SmallTask" inverseName="task" inverseEntity="SmallTask"/>
     </entity>
     <elements>
-        <element name="SmallTask" positionX="-63" positionY="9" width="128" height="194"/>
+        <element name="SmallTask" positionX="-63" positionY="9" width="128" height="164"/>
         <element name="Task" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>
