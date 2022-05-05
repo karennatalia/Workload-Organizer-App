@@ -16,7 +16,6 @@ class AddViewSmallTaskViewController: UIViewController {
     @IBOutlet weak var setTimeSwitch: UISwitch!
     @IBOutlet weak var additionalBGView: UIView!
     @IBOutlet weak var timeNeededPicker: UIDatePicker!
-    @IBOutlet weak var leftActionBtn: UIButton!
     @IBOutlet weak var rightActionBtn: UIButton!
     
     @IBOutlet weak var timePickerHeightConstraint: NSLayoutConstraint!
@@ -34,6 +33,9 @@ class AddViewSmallTaskViewController: UIViewController {
 
         closeTimePicker()
         titlePage.text = "Add Small Task"
+        setButtonStyle(titleText: "Add Small Task", colorName: "Red")
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backAction(sender:)))
         
         if isViewing == true {
             titlePage.text = "Small Task"
@@ -49,18 +51,61 @@ class AddViewSmallTaskViewController: UIViewController {
                 timeNeededPicker.date = dateFormatter.date(from: timeString)!
                 openTimePicker()
             }
-            leftActionBtn.setTitle("Save Change", for: .normal)
             if selectedSmallTask?.assignToday == false {
-                rightActionBtn.setTitle("Do This Today", for: .normal)
+                setButtonStyle(titleText: "Do This Today", colorName: "Red")
             }
             else {
-                rightActionBtn.setTitle("Not Today", for: .normal)
+                setButtonStyle(titleText: "Remove From Today's Task", colorName: "LightRed")
             }
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        isViewing = false
+    func setButtonStyle(titleText: String, colorName: String) {
+        rightActionBtn.layer.cornerRadius = 5.0
+        rightActionBtn.setTitleColor(UIColor.white, for: .normal)
+        rightActionBtn.backgroundColor = UIColor(named: colorName)
+        rightActionBtn.setTitle(titleText, for: .normal)
+        if colorName == "Red" {
+            rightActionBtn.setTitleColor(UIColor.white, for: .normal)
+        }
+        else {
+            rightActionBtn.setTitleColor(UIColor(named: "Red"), for: .normal)
+        }
+    }
+    
+    @objc func backAction(sender: UIBarButtonItem) {
+        print("back clicked")
+        if isViewing == true {  // save
+            if smallTaskTitleField.text?.isEmpty == true {
+                Helper.showAlert(title: "Small Task Name Required", message: "You need to give the small task a name", over: self)
+            }
+            else {
+                let updatedSmallTask = smallTaskList[selectedSmallTaskIndex]
+                updatedSmallTask.title = smallTaskTitleField.text!
+                updatedSmallTask.priority = getPriority()
+                updatedSmallTask.difficulty = getDifficulty()
+
+                if setTimeSwitch.isOn {
+                    updatedSmallTask.setTime = true
+
+                    let dateComp = Calendar.current.dateComponents([.hour, .minute], from: timeNeededPicker.date)
+                    updatedSmallTask.hour = "\(dateComp.hour!)"
+                    updatedSmallTask.minute = "\(dateComp.minute!)"
+                }
+                else {
+                    updatedSmallTask.setTime = false
+                    updatedSmallTask.hour = ""
+                    updatedSmallTask.minute = ""
+                }
+
+                smallTaskList[selectedSmallTaskIndex] = updatedSmallTask
+                
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func setTimeSwitchChanged(_ sender: Any) {
@@ -72,43 +117,16 @@ class AddViewSmallTaskViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelOrSaveAction(_ sender: Any) {
-        if isViewing == true {
-            let updatedSmallTask = smallTaskList[selectedSmallTaskIndex]
-//            let newSmallTask = SmallTask(context: context)
-            updatedSmallTask.title = smallTaskTitleField.text!
-            updatedSmallTask.priority = getPriority()
-            updatedSmallTask.difficulty = getDifficulty()
-
-            if setTimeSwitch.isOn {
-                updatedSmallTask.setTime = true
-
-                let dateComp = Calendar.current.dateComponents([.hour, .minute], from: timeNeededPicker.date)
-                updatedSmallTask.hour = "\(dateComp.hour!)"
-                updatedSmallTask.minute = "\(dateComp.minute!)"
-            }
-            else {
-                updatedSmallTask.setTime = false
-                updatedSmallTask.hour = ""
-                updatedSmallTask.minute = ""
-            }
-
-            updatedSmallTask.assignToday = false
-            smallTaskList[selectedSmallTaskIndex] = updatedSmallTask
-        }
-        performSegue(withIdentifier: "unwindToAddViewTask", sender: self)
-    }
-    
     @IBAction func addSmallTaskAction(_ sender: Any) {
         if isViewing == true {
             // add to today
             if selectedSmallTask?.assignToday == false {
                 selectedSmallTask?.assignToday = true
-                rightActionBtn.setTitle("Not Today", for: .normal)
+                setButtonStyle(titleText: "Remove From Today's Task", colorName: "LightRed")
             }
             else {
                 selectedSmallTask?.assignToday = false
-                rightActionBtn.setTitle("Do This Today", for: .normal)
+                setButtonStyle(titleText: "Do This Today", colorName: "Red")
             }
             do {
                 try self.context.save()
@@ -144,15 +162,8 @@ class AddViewSmallTaskViewController: UIViewController {
                 smallTaskList.append(newSmallTask)
                 
                 isViewing = false
-                performSegue(withIdentifier: "unwindToAddViewTask", sender: self)
+                self.navigationController?.popViewController(animated: true)
             }
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "unwindToAddViewTask" {
-            let dest = segue.destination as! AddViewTaskViewController
-            dest.smallTaskList = smallTaskList
         }
     }
 
