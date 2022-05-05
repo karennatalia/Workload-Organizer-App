@@ -125,7 +125,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-hq-Ghe">
-                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="15"/>
+                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -341,29 +341,6 @@
                                     <constraint firstItem="Ge0-yU-rg0" firstAttribute="leading" secondItem="buR-i9-s3G" secondAttribute="leading" constant="24" id="tHF-bi-OR7"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptv-Jd-Ahi">
-                                <rect key="frame" x="24" y="804" width="160" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="EWO-bf-I9e"/>
-                                    <constraint firstAttribute="height" constant="52" id="tnH-EB-MVx"/>
-                                </constraints>
-                                <color key="tintColor" name="Red"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Cancel">
-                                            <attributes>
-                                                <font key="NSFont" size="15" name="SFProText-Semibold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.82014745473861694" green="0.10643584281206131" blue="0.049045152962207794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="cancelOrSaveAction:" destination="jut-LQ-P1B" eventType="touchUpInside" id="75P-Yh-LdL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-2I-AtE">
                                 <rect key="frame" x="345" y="320" width="45" height="31"/>
                                 <color key="tintColor" name="Red"/>
@@ -459,7 +436,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk7-f1-CFg">
-                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="15"/>
+                                                    <rect key="frame" x="45" y="64.5" width="34.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="SFProText-Light" family="SF Pro Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -502,14 +479,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-k7-OD4">
-                                <rect key="frame" x="230" y="804" width="160" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkQ-k7-OD4">
+                                <rect key="frame" x="24" y="804" width="366" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="A5A-B0-gVB"/>
-                                    <constraint firstAttribute="width" constant="160" id="uMT-PX-yNJ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
+                                <color key="tintColor" name="Red"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Task">
                                             <attributes>
@@ -517,7 +494,15 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" red="0.82014745469999994" green="0.1064358428" blue="0.049045152959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Add Task">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="SFProText-Semibold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addNewTaskAction:" destination="jut-LQ-P1B" eventType="touchUpInside" id="rV4-5D-eWe"/>
@@ -528,7 +513,7 @@
                         <color key="backgroundColor" name="White"/>
                         <constraints>
                             <constraint firstItem="72T-xq-usG" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" constant="24" id="0AD-21-PBs"/>
-                            <constraint firstItem="ptv-Jd-Ahi" firstAttribute="top" secondItem="s23-d7-2dJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ABY-kR-8Uw"/>
+                            <constraint firstItem="IkQ-k7-OD4" firstAttribute="top" secondItem="s23-d7-2dJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5Ca-H2-cp0"/>
                             <constraint firstItem="72T-xq-usG" firstAttribute="top" secondItem="0Ix-vE-yJj" secondAttribute="bottom" constant="30" id="AlY-9i-JOD"/>
                             <constraint firstItem="buR-i9-s3G" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" id="D2y-uR-SXn"/>
                             <constraint firstItem="s23-d7-2dJ" firstAttribute="top" secondItem="Occ-2I-AtE" secondAttribute="bottom" id="HgG-Sf-sSv"/>
@@ -545,13 +530,12 @@
                             <constraint firstItem="X80-dM-k4M" firstAttribute="top" secondItem="0Ix-vE-yJj" secondAttribute="bottom" constant="34" id="bwQ-li-6ks"/>
                             <constraint firstItem="0Ix-vE-yJj" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" id="cm0-lM-NZ6"/>
                             <constraint firstItem="JeR-WN-6Ut" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" constant="24" id="elv-a1-0Uv"/>
-                            <constraint firstItem="Fv3-GZ-zO9" firstAttribute="bottom" secondItem="ptv-Jd-Ahi" secondAttribute="bottom" constant="6" id="gee-J2-SPc"/>
                             <constraint firstItem="buR-i9-s3G" firstAttribute="top" secondItem="bJi-FG-CyR" secondAttribute="top" id="kgv-6v-qSv"/>
-                            <constraint firstItem="ptv-Jd-Ahi" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" constant="24" id="lh4-as-yMn"/>
                             <constraint firstItem="Fv3-GZ-zO9" firstAttribute="trailing" secondItem="IkQ-k7-OD4" secondAttribute="trailing" constant="24" id="mCP-XQ-kqU"/>
                             <constraint firstItem="s23-d7-2dJ" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" id="pzO-Sp-Hph"/>
                             <constraint firstItem="s23-d7-2dJ" firstAttribute="trailing" secondItem="Fv3-GZ-zO9" secondAttribute="trailing" id="qzU-iw-F5b"/>
                             <constraint firstItem="Fv3-GZ-zO9" firstAttribute="bottom" secondItem="IkQ-k7-OD4" secondAttribute="bottom" constant="6" id="tuv-Qy-rMt"/>
+                            <constraint firstItem="IkQ-k7-OD4" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" constant="24" id="uxa-vf-DTp"/>
                             <constraint firstItem="CMQ-Ap-GhI" firstAttribute="leading" secondItem="Fv3-GZ-zO9" secondAttribute="leading" constant="24" id="vrR-IE-Zbv"/>
                             <constraint firstItem="Fv3-GZ-zO9" firstAttribute="trailing" secondItem="VTd-ei-PoB" secondAttribute="trailing" constant="24" id="woq-uT-0lh"/>
                         </constraints>
@@ -560,17 +544,14 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dueDatePicker" destination="VTd-ei-PoB" id="OuK-VQ-Prs"/>
-                        <outlet property="leftActionBtn" destination="ptv-Jd-Ahi" id="eUL-ip-EGN"/>
                         <outlet property="rightActionBtn" destination="IkQ-k7-OD4" id="oEK-dS-c7K"/>
                         <outlet property="smallTaskTableView" destination="s23-d7-2dJ" id="TfS-fI-Ok3"/>
                         <outlet property="taskTitleField" destination="JeR-WN-6Ut" id="PUU-ba-qkQ"/>
                         <outlet property="titlePage" destination="Ge0-yU-rg0" id="NHg-6o-f4d"/>
                         <segue destination="no8-YT-ZCx" kind="show" identifier="toAddSmallTaskSegue" id="AG5-8f-dhe"/>
-                        <segue destination="WcJ-M6-TEI" kind="unwind" identifier="unwindToMyTasks" unwindAction="unwindToMyTasks:" id="fhD-B1-oql"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoK-Ko-XtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="WcJ-M6-TEI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2569.5652173913045" y="707.8125"/>
         </scene>
@@ -701,37 +682,14 @@
                                     <constraint firstAttribute="height" constant="170" id="nWN-pC-fZd"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsV-Wh-ujZ">
-                                <rect key="frame" x="24" y="804" width="160" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-Tf-56w">
+                                <rect key="frame" x="24" y="755" width="366" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="Ljm-4w-EJ1"/>
-                                    <constraint firstAttribute="width" constant="160" id="i45-Ra-4Kt"/>
+                                    <constraint firstAttribute="height" constant="52" id="bau-6X-x6m"/>
                                 </constraints>
                                 <color key="tintColor" name="Red"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Cancel">
-                                            <attributes>
-                                                <font key="NSFont" size="15" name="SFProText-Semibold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" red="0.82014745469999994" green="0.1064358428" blue="0.049045152959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="cancelOrSaveAction:" destination="no8-YT-ZCx" eventType="touchUpInside" id="Smj-5s-LcT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-Tf-56w">
-                                <rect key="frame" x="230" y="804" width="160" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="bau-6X-x6m"/>
-                                    <constraint firstAttribute="width" constant="160" id="ncX-xU-1hM"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
+                                <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add Small Task">
                                             <attributes>
@@ -739,7 +697,6 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" red="0.82014745469999994" green="0.1064358428" blue="0.049045152959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="addSmallTaskAction:" destination="no8-YT-ZCx" eventType="touchUpInside" id="SJz-PB-kvI"/>
@@ -749,10 +706,8 @@
                         <viewLayoutGuide key="safeArea" id="78m-Dd-AfH"/>
                         <color key="backgroundColor" name="White"/>
                         <constraints>
-                            <constraint firstItem="SsV-Wh-ujZ" firstAttribute="leading" secondItem="78m-Dd-AfH" secondAttribute="leading" constant="24" id="9PP-Po-dbB"/>
                             <constraint firstItem="9UH-B9-OwG" firstAttribute="top" secondItem="cSM-ST-JrY" secondAttribute="bottom" id="BHb-Zc-TcY"/>
                             <constraint firstItem="cSM-ST-JrY" firstAttribute="top" secondItem="mhA-Yh-iCg" secondAttribute="top" id="Bhl-yp-xzI"/>
-                            <constraint firstItem="78m-Dd-AfH" firstAttribute="bottom" secondItem="SsV-Wh-ujZ" secondAttribute="bottom" constant="6" id="CZX-GK-Ebf"/>
                             <constraint firstItem="78m-Dd-AfH" firstAttribute="bottom" secondItem="dDi-Tf-56w" secondAttribute="bottom" constant="6" id="H5r-WY-QXK"/>
                             <constraint firstItem="k4a-5c-mJi" firstAttribute="leading" secondItem="dVT-jR-pfE" secondAttribute="trailing" constant="4" id="Het-fa-3qZ"/>
                             <constraint firstItem="9UH-B9-OwG" firstAttribute="trailing" secondItem="78m-Dd-AfH" secondAttribute="trailing" id="MCw-jh-OsX"/>
@@ -761,6 +716,7 @@
                             <constraint firstItem="78m-Dd-AfH" firstAttribute="trailing" secondItem="dDi-Tf-56w" secondAttribute="trailing" constant="24" id="ZMJ-Ey-iyi"/>
                             <constraint firstItem="k4a-5c-mJi" firstAttribute="top" secondItem="9UH-B9-OwG" secondAttribute="bottom" constant="34" id="ZwX-AH-YhW"/>
                             <constraint firstItem="dVT-jR-pfE" firstAttribute="leading" secondItem="78m-Dd-AfH" secondAttribute="leading" constant="24" id="cP0-26-gkM"/>
+                            <constraint firstItem="dDi-Tf-56w" firstAttribute="leading" secondItem="78m-Dd-AfH" secondAttribute="leading" constant="24" id="d7a-iE-Wkt"/>
                             <constraint firstItem="cSM-ST-JrY" firstAttribute="leading" secondItem="78m-Dd-AfH" secondAttribute="leading" id="fwH-z6-M3l"/>
                             <constraint firstItem="dVT-jR-pfE" firstAttribute="top" secondItem="9UH-B9-OwG" secondAttribute="bottom" constant="30" id="hH6-mA-3jV"/>
                             <constraint firstItem="cSM-ST-JrY" firstAttribute="trailing" secondItem="78m-Dd-AfH" secondAttribute="trailing" id="kVZ-ue-yz7"/>
@@ -774,7 +730,6 @@
                         <outlet property="additionalBGView" destination="lbN-VJ-ETK" id="HAH-jS-dl1"/>
                         <outlet property="bgViewHeightConstraint" destination="nWN-pC-fZd" id="I57-ey-uPe"/>
                         <outlet property="difficultySC" destination="o9U-Y2-hRT" id="cUP-bq-ti5"/>
-                        <outlet property="leftActionBtn" destination="SsV-Wh-ujZ" id="pjn-rq-j4b"/>
                         <outlet property="prioritySC" destination="eg2-QL-d6b" id="BdR-TL-6GY"/>
                         <outlet property="rightActionBtn" destination="dDi-Tf-56w" id="SrR-pm-Q3T"/>
                         <outlet property="setTimeSwitch" destination="s5N-7A-Oeu" id="Vo2-p1-jSJ"/>
@@ -782,11 +737,9 @@
                         <outlet property="timeNeededPicker" destination="eXy-Jg-Q9D" id="cHb-U8-TiC"/>
                         <outlet property="timePickerHeightConstraint" destination="Pc4-rh-odV" id="GqU-dj-szQ"/>
                         <outlet property="titlePage" destination="Cgi-xS-81J" id="FU2-xY-opP"/>
-                        <segue destination="qTj-IM-cCF" kind="unwind" identifier="unwindToAddViewTask" unwindAction="unwindToAddViewTask:" id="3Ra-mx-9O1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxm-7x-y66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="qTj-IM-cCF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3431.884057971015" y="707.8125"/>
         </scene>
@@ -813,6 +766,7 @@
         <!--Tasks-->
         <scene sceneID="lrp-rO-OUx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkv-lx-wHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHx-hi-MwF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasks" image="list.bullet" catalog="system" id="EiB-qm-2Cf"/>
                     <toolbarItems/>
@@ -825,7 +779,6 @@
                         <segue destination="u8F-f9-8Op" kind="relationship" relationship="rootViewController" id="Mu4-Tm-fRf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkv-lx-wHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="707.8125"/>
         </scene>
@@ -845,7 +798,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="5Je-Ol-mwB"/>
+        <segue reference="BdD-5I-7lI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>

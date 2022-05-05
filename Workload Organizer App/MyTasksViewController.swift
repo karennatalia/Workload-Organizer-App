@@ -38,16 +38,12 @@ class MyTasksViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        fetchTasks()
         selectedIndex = -1
     }
     
     @IBAction func addTaskAction(_ sender: Any) {
         performSegue(withIdentifier: "toAddTaskSegue", sender: self)
-    }
-    
-    @IBAction func unwindToMyTasks(_ unwindSegue: UIStoryboardSegue) {
-        fetchTasks()
-        selectedIndex = -1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

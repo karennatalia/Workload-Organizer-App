@@ -19,7 +19,6 @@ class AddViewTaskViewController: UIViewController {
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var smallTaskTableView: UITableView!
     @IBOutlet weak var rightActionBtn: UIButton!
-    @IBOutlet weak var leftActionBtn: UIButton!
 
     var smallTaskList: [SmallTask] = []
     var isViewing = false
@@ -34,36 +33,53 @@ class AddViewTaskViewController: UIViewController {
         super.viewDidLoad()
 
         self.tabBarController?.tabBar.isHidden = true
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backAction(sender:)))
+        
         smallTaskTableView.delegate = self
         smallTaskTableView.dataSource = self
         
         titlePage.text = "Add New Task"
-        
-//        newTask = Task(context: context)
+        setButtonStyle(titleText: "Add Task", colorName: "Red")
         
         if isViewing == true {
             titlePage.text = "Task"
             taskTitleField.text = selectedTask?.title
             dueDatePicker.date = (selectedTask?.dueDate)!
             smallTaskList = selectedTask?.smallTasks?.allObjects as! [SmallTask]
-            rightActionBtn.setTitle("Do All Today", for: .normal)
-            leftActionBtn.setTitle("Save Change", for: .normal)
+            rightActionBtn.isHidden = true
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         selectedSmallTaskIndex = -1
+        fetchSmallTasks()
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        if self.isMovingFromParent && isViewing == true {
-//            print("ismoving")
-//            if smallTaskList.count == 0 {
-//                Helper.showAlert(title: "Minimum 1 Small Task Required", message: "You need to add minimum 1 small task to be able to create a task", over: self)
-//            }
-//        }
-//    }
+    func setButtonStyle(titleText: String, colorName: String) {
+        rightActionBtn.layer.cornerRadius = 5.0
+        rightActionBtn.setTitleColor(UIColor.white, for: .normal)
+        rightActionBtn.backgroundColor = UIColor(named: colorName)
+        rightActionBtn.setTitle(titleText, for: .normal)
+    }
+    
+    @objc func backAction(sender: UIBarButtonItem) {
+        print("back clicked")
+        if isViewing == true {  // save
+            if taskTitleField.text?.isEmpty == true {
+                Helper.showAlert(title: "Task Name Required", message: "You need to give the task a name", over: self)
+            }
+            else if smallTaskList.count == 0 {
+                Helper.showAlert(title: "Minimum 1 Small Task Required", message: "You need to add minimum 1 small task to be able to create a task", over: self)
+            }
+            else {
+                delegate?.updateData(taskTitle: taskTitleField.text!, newDueDate: dueDatePicker.date, progress: 50, smallTaskList: smallTaskList, updatedIndex: selectedIndex)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 
     func fetchSmallTasks() {
         do {
@@ -74,13 +90,6 @@ class AddViewTaskViewController: UIViewController {
         } catch {
             
         }
-    }
-    
-    @IBAction func cancelOrSaveAction(_ sender: Any) {
-        if isViewing == true {
-            delegate?.updateData(taskTitle: taskTitleField.text!, newDueDate: dueDatePicker.date, progress: 50, smallTaskList: smallTaskList, updatedIndex: selectedIndex)
-        }
-        performSegue(withIdentifier: "unwindToMyTasks", sender: self)
     }
     
     @IBAction func addSmallTaskAction(_ sender: Any) {
@@ -111,12 +120,8 @@ class AddViewTaskViewController: UIViewController {
             }
             isViewing = false
             selectedSmallTaskIndex = -1
-            performSegue(withIdentifier: "unwindToMyTasks", sender: self)
+            self.navigationController?.popViewController(animated: true)
         }
-    }
-    
-    @IBAction func unwindToAddViewTask(_ unwindSegue: UIStoryboardSegue) {
-        smallTaskTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
