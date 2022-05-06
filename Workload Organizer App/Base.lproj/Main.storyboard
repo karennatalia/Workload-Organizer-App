@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,16 +182,15 @@
                             <constraint firstItem="hxY-tF-rx2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zxo-3L-wKE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="sgI-NL-Jqz"/>
+                    <navigationItem key="navigationItem" id="LiS-6Q-B5t"/>
                     <connections>
                         <outlet property="motivationLabel" destination="795-Qt-ia0" id="2ab-aO-Yjw"/>
                         <outlet property="todaysTableView" destination="VC3-9J-EcR" id="DwZ-rO-ynw"/>
-                        <segue destination="no8-YT-ZCx" kind="show" identifier="homeToSmallTaskSegue" id="5Je-Ol-mwB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="19"/>
+            <point key="canvasLocation" x="1780" y="19"/>
         </scene>
         <!--My Tasks View Controller-->
         <scene sceneID="KUR-a1-dG2">
@@ -558,7 +557,7 @@
         <!--Add View Small Task View Controller-->
         <scene sceneID="lPH-mC-GrU">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="no8-YT-ZCx" customClass="AddViewSmallTaskViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addViewSmallTaskID" modalPresentationStyle="fullScreen" id="no8-YT-ZCx" customClass="AddViewSmallTaskViewController" customModule="Workload_Organizer_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mhA-Yh-iCg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -755,7 +754,7 @@
                         <color key="selectedImageTintColor" name="Red"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Gge-8M-qBf"/>
+                        <segue destination="R1Q-ky-p4t" kind="relationship" relationship="viewControllers" id="Gge-8M-qBf"/>
                         <segue destination="zHx-hi-MwF" kind="relationship" relationship="viewControllers" id="52h-ke-Fpp"/>
                     </connections>
                 </tabBarController>
@@ -766,7 +765,6 @@
         <!--Tasks-->
         <scene sceneID="lrp-rO-OUx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkv-lx-wHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zHx-hi-MwF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tasks" image="list.bullet" catalog="system" id="EiB-qm-2Cf"/>
                     <toolbarItems/>
@@ -779,8 +777,28 @@
                         <segue destination="u8F-f9-8Op" kind="relationship" relationship="rootViewController" id="Mu4-Tm-fRf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fkv-lx-wHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="707.8125"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="WJJ-UT-utH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R1Q-ky-p4t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="sgI-NL-Jqz"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZmL-8C-u9Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZMb-fD-44X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHw-py-5f1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="18.75"/>
         </scene>
     </scenes>
     <designables>

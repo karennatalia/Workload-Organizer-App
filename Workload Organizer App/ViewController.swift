@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
         fetchSmallTasks()
         checkFinished()
         setMotivationText()
@@ -71,11 +72,29 @@ class ViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "homeToSmallTaskSegue" {
-            let dest = segue.destination as! AddViewSmallTaskViewController
-            
+    func getSmallTaskList(selectedIndex: Int) -> [SmallTask] {
+        do {
+            let taskTitle = todaysTaskList[selectedIndex].task?.title
+            let fetchTask: NSFetchRequest<Task> = Task.fetchRequest()
+            fetchTask.predicate = NSPredicate(format: "title = %@", taskTitle!)
+
+            let task = try! context.fetch(fetchTask)
+            return task[0].smallTasks?.allObjects as! [SmallTask]
+        } catch {
+            print(error)
         }
+    }
+    
+    func getSelectedTaskIndex(selectedIndex: Int) -> Int {
+        let smallTasks = getSmallTaskList(selectedIndex: selectedIndex)
+        for (index, smallTask) in smallTasks.enumerated() {
+            print("\(smallTask.title) == \(todaysTaskList[selectedIndex].title)")
+            if smallTask.title == todaysTaskList[selectedIndex].title {
+                print("return \(index)")
+                return index
+            }
+        }
+        return 0
     }
 
 }
@@ -132,7 +151,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "homeToSmallTaskSegue", sender: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let addViewTaskVC = storyboard.instantiateViewController(withIdentifier: "addViewTaskID") as? AddViewTaskViewController,
+           let addViewSmallTaskVC = storyboard.instantiateViewController(withIdentifier: "addViewSmallTaskID") as? AddViewSmallTaskViewController {
+            
+            // setip add view task vc
+            addViewTaskVC.isViewing = true
+            addViewTaskVC.selectedTask = todaysTaskList[indexPath.section].task
+            
+            // setup add view small task vc
+            addViewSmallTaskVC.selectedSmallTask = todaysTaskList[indexPath.section]
+            addViewSmallTaskVC.smallTaskList = getSmallTaskList(selectedIndex: indexPath.section)
+            addViewSmallTaskVC.selectedSmallTaskIndex = getSelectedTaskIndex(selectedIndex: indexPath.section)
+            addViewSmallTaskVC.isViewing = true
+            
+            let VCStack = [self, addViewTaskVC, addViewSmallTaskVC]
+            self.navigationController?.setViewControllers(VCStack, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
