@@ -31,10 +31,13 @@ class AddViewSmallTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("view did load small task :: \(selectedSmallTaskIndex)")
+        
         closeTimePicker()
         titlePage.text = "Add Small Task"
         setButtonStyle(titleText: "Add Small Task", colorName: "Red")
         
+        self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backAction(sender:)))
         
         if isViewing == true {
@@ -80,6 +83,7 @@ class AddViewSmallTaskViewController: UIViewController {
                 Helper.showAlert(title: "Small Task Name Required", message: "You need to give the small task a name", over: self)
             }
             else {
+                print(selectedSmallTaskIndex)
                 let updatedSmallTask = smallTaskList[selectedSmallTaskIndex]
                 updatedSmallTask.title = smallTaskTitleField.text!
                 updatedSmallTask.priority = getPriority()
