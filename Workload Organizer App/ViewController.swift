@@ -10,6 +10,7 @@ import CoreData
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var motivationLabel: UILabel!
     @IBOutlet weak var todaysTableView: UITableView!
     
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         todaysTableView.delegate = self
         todaysTableView.dataSource = self
         
+        setGreetingText()
         fetchSmallTasks()
     }
     
@@ -33,6 +35,23 @@ class ViewController: UIViewController {
         checkFinished()
         setMotivationText()
         todaysTableView.reloadData()
+    }
+    
+    func setGreetingText() {
+        let hourNow = (Calendar.current.component(.hour, from: Date()))
+        print(hourNow)
+        if hourNow >= 5 && hourNow < 12 {
+            greetingLabel.text = "Good Morning"
+        }
+        else if hourNow >= 12 && hourNow < 17 {
+            greetingLabel.text = "Good Afternoon"
+        }
+        else if hourNow >= 17 && hourNow < 21 {
+            greetingLabel.text = "Good Evening"
+        }
+        else {
+            greetingLabel.text = "Good Night"
+        }
     }
     
     func setMotivationText() {

@@ -184,6 +184,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LiS-6Q-B5t"/>
                     <connections>
+                        <outlet property="greetingLabel" destination="ftE-Xz-BDH" id="C51-NN-qC0"/>
                         <outlet property="motivationLabel" destination="795-Qt-ia0" id="2ab-aO-Yjw"/>
                         <outlet property="todaysTableView" destination="VC3-9J-EcR" id="DwZ-rO-ynw"/>
                     </connections>
