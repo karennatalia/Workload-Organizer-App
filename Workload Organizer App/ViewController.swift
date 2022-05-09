@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var finishedCount = 0
     
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
         
         setGreetingText()
         fetchSmallTasks()
+        checkFinished()
+        checkNewDay()
+        setMotivationText()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +41,55 @@ class ViewController: UIViewController {
         todaysTableView.reloadData()
     }
     
+    func checkNewDay() {
+        let checkSaved = userDefaults.bool(forKey: "savedDate")
+        let currDate = Calendar.current.component(.day, from: Date())
+        if checkSaved == false {
+            userDefaults.set(currDate, forKey: "savedDate")
+        }
+        else {
+            let savedDate = userDefaults.object(forKey: "savedDate") as! Int
+            let message:String
+            if savedDate != currDate {
+                userDefaults.set(currDate, forKey: "savedDate")
+                if finishedCount == todaysTaskList.count {
+                    message = "Great Job! You finished all tasks yesterday!"
+                }
+                else {
+                    message = "You have some unfinished task yesterday"
+                }
+                showResetAlert(message: message)
+            }
+        }
+    }
+    
+    func showResetAlert(message: String) {
+        let alert = UIAlertController(title: "It's a New Day!", message: "\(message)\n\nDo you want to reset Today's Task List?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Reset", style: .destructive) { action in
+            self.removeSmallTaskAssignToday()
+            self.todaysTaskList.removeAll()
+            self.finishedCount = 0
+        })
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func removeSmallTaskAssignToday() {
+        for task in todaysTaskList {
+            task.assignToday = false
+        }
+        do {
+            try self.context.save()
+            DispatchQueue.main.async {
+                self.todaysTableView.reloadData()
+            }
+        } catch {
+
+        }
+    }
+    
     func setGreetingText() {
         let hourNow = (Calendar.current.component(.hour, from: Date()))
-        print(hourNow)
         if hourNow >= 5 && hourNow < 12 {
             greetingLabel.text = "Good Morning"
         }
@@ -107,9 +157,7 @@ class ViewController: UIViewController {
     func getSelectedTaskIndex(selectedIndex: Int) -> Int {
         let smallTasks = getSmallTaskList(selectedIndex: selectedIndex)
         for (index, smallTask) in smallTasks.enumerated() {
-            print("\(smallTask.title) == \(todaysTaskList[selectedIndex].title)")
             if smallTask.title == todaysTaskList[selectedIndex].title {
-                print("return \(index)")
                 return index
             }
         }
