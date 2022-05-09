@@ -238,27 +238,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
-            let removedSmallTask = self.todaysTaskList[indexPath.section]
-            
-            self.context.delete(removedSmallTask)
-            
-            do {
-                try self.context.save()
-            }
-            catch {
-                
-            }
-            
-            self.fetchSmallTasks()
-            self.checkFinished()
-            self.setMotivationText()
-        }
-        
-        return UISwipeActionsConfiguration(actions: [action])
-    }
-    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         var action = UIContextualAction()
         if todaysTaskList[indexPath.section].isDone == false {

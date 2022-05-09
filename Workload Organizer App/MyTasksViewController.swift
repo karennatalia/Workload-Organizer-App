@@ -73,6 +73,7 @@ extension MyTasksViewController: UITableViewDelegate, UITableViewDataSource {
         
         let task = self.taskList![indexPath.section]
         let progressNumber = getProgress(task: task)
+        print("progress \(progressNumber)")
         
         cell.taskTitleLabel.text = task.title
         cell.dueDateLabel.text = Helper.formatDate(date: task.dueDate!)

@@ -50,6 +50,7 @@ class AddViewTaskViewController: UIViewController {
         }
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         selectedSmallTaskIndex = -1
         fetchSmallTasks()
